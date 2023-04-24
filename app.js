@@ -13,6 +13,7 @@ app.set("view engine", "pug");
 app.set("views", "views"); // the default is 'views', but it your folder is not name 'view', change the second argument to your folder name.
 
 const adminRoute = require("./routes/admin");
+const registerRoute = require("./routes/register");
 const shopRoute = require("./routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, "public"))); // anything try to file
 // it will automatically forward it to the public folder.
 
 app.use("/admin", adminRoute);
+app.use(registerRoute);
 app.use(shopRoute);
 
 app.use((req, res, next) => {
