@@ -13,4 +13,8 @@ router.get("/", (req, res, next) => {
   // res.sendFile(path.join(rootDir, "views", "shop.html")); // You can use this instead
 });
 
+router.get("/aboutus", (req, res, next) => {
+  res.render("aboutus");
+});
+
 module.exports = router;
