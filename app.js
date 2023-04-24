@@ -14,6 +14,7 @@ app.set("views", "views"); // the default is 'views', but it your folder is not 
 
 const adminRoute = require("./routes/admin");
 const registerRoute = require("./routes/register");
+const loginRoute = require("./routes/login");
 const shopRoute = require("./routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, "public"))); // anything try to file
 
 app.use("/admin", adminRoute);
 app.use(registerRoute);
+app.use(loginRoute);
 app.use(shopRoute);
 
 app.use((req, res, next) => {
