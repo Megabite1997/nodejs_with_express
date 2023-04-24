@@ -8,6 +8,8 @@ const adminRoute = require("./routes/admin");
 const shopRoute = require("./routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public"))); // anything try to file a .css or .javascript files
+// it will automatically forward it to the public folder.
 
 app.use("/admin", adminRoute);
 app.use(shopRoute);
