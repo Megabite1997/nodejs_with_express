@@ -10,3 +10,8 @@ html(lang="en")
         main 
             h1.text-center Login Page
             h4.text-center Please login and then.....
+
+            if products.length > 0
+                each product in products 
+                    p.text-center Items: #{product.item}
+                    p.text-center Price: #{product.price}
