@@ -2,10 +2,12 @@
 
 This will use ExpressJS to create backend.
 
-## Using Template Engines
+## Example of using Template Engines
 
-- use PUG
+- PUG
 
-- use EJS
+- Express Handlebars (cumbersome)
+
+- EJS
 
 
