@@ -14,7 +14,7 @@ router.get("/", (req, res, next) => {
 });
 
 router.get("/aboutus", (req, res, next) => {
-  res.render("aboutus");
+  res.render("./pug/aboutus");
 });
 
 module.exports = router;
