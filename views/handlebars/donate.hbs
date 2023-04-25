@@ -1,1 +1,11 @@
 <h1>Hello my friend</h1>
+
+{{#if hasEmployee}}
+  {{! condition only needs to be boolean, true or false value }}
+  {{! cannot be such as "employees.length > 0", needs to write on render() second parameter  }}
+  <p>Here is our employees</p>
+  {{#each employees}}
+    <p>Name: {{this.name}}</p>
+    <p>Position: {{this.position}}</p>
+  {{/each}}
+{{/if}}

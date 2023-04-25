@@ -25,7 +25,12 @@ router.get("/contactus", (req, res, next) => {
 });
 
 router.get("/donate", (req, res, next) => {
-  res.render("./handlebars/donate");
+  const employees = [{ name: "Water", position: "Software engineer" }];
+  res.render("./handlebars/donate", {
+    companyNumber: "086-446-4444",
+    employees,
+    hasEmployee: employees.length > 0,
+  });
 });
 
 module.exports = router;
