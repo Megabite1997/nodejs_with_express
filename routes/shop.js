@@ -18,8 +18,14 @@ router.get("/aboutus", (req, res, next) => {
 });
 
 router.get("/contactus", (req, res, next) => {
-  console.log("hello world");
-  res.render("./handlebars/contactus");
+  res.render("./handlebars/contactus", {
+    pageTitle: "You can contact us",
+    layout: false,
+  });
+});
+
+router.get("/donate", (req, res, next) => {
+  res.render("./handlebars/donate");
 });
 
 module.exports = router;
