@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandarin Muffin</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <h1 class="text-center"><%= pageTitle %></h1>
+    <% if (memberNumber > 2) { %>
+    <h4 class="text-center">Nice we have member more than 2</h4>
+
+    <% } else { %>
+    <h4 class="text-center">Oh! we have less than 3</h4>
+    <% } %>
+
+    <div>
+      <h2>Teachers in this meeting</h2>
+      <% for (let teacher of teachers) { %>
+      <h4>Teacher <%= teacher.name %></h4>
+      <h4>Course <%= teacher.course %></h4>
+      <% } %>
+    </div>
+  </body>
+</html>

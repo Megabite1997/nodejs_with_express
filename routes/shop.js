@@ -33,4 +33,19 @@ router.get("/donate", (req, res, next) => {
   });
 });
 
+router.get("/lightroom", (req, res, next) => {
+  res.render("./ejs/lightroom", {
+    pageTitle: "HERE IS LIGHTROOM",
+    memberNumber: 10,
+    teachers: [
+      { name: "Bob", course: "Math" },
+      { name: "Janifer", course: "Surviving" },
+    ],
+  });
+});
+
+router.get("/darkroom", (req, res, next) => {
+  res.render("./ejs/darkroom");
+});
+
 module.exports = router;

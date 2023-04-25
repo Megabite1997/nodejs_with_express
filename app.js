@@ -19,17 +19,24 @@ const app = express();
 
 // --------------------------set 'Handlebars' template engine---------------------------
 
-app.engine(
-  "hbs",
-  expressHbs.engine({
-    extname: "hbs",
-    defaultLayout: "main-layout",
-    layoutsDir: "views/layouts/",
-  }),
-);
-// register new template engine, but PUG not cause it is builtin.
+// app.engine(
+//   "hbs",
+//   expressHbs.engine({
+//     extname: "hbs",
+//     defaultLayout: "main-layout",
+//     layoutsDir: "views/layouts/",
+//   }),
+// );
+// // register new template engine, but PUG not cause it is builtin.
 
-app.set("view engine", "hbs"); // switch to use 'handlebars'
+// app.set("view engine", "hbs"); // switch to use 'handlebars'
+// app.set("views", "views");
+
+// -------------------------------------------------------------------------------------
+
+// --------------------------set 'EJS' template engine----------------------------------
+
+app.set("view engine", "ejs");
 app.set("views", "views");
 
 // -------------------------------------------------------------------------------------
