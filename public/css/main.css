@@ -1,7 +1,38 @@
-.text-center {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.main-header {
-  background-color: red;
+body {
+  margin: 0;
+}
+
+.main-header_nav {
+  background-color: green;
+  padding: 10px;
+}
+
+.main-header_item-list {
+  display: flex;
+  padding: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+  gap: 100px;
+  font-size: 20px;
+}
+
+.main-header_item {
+  list-style: none;
+}
+
+.main-header_item a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-header_item a:hover {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
 }
