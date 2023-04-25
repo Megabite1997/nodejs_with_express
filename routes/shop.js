@@ -17,4 +17,9 @@ router.get("/aboutus", (req, res, next) => {
   res.render("./pug/aboutus");
 });
 
+router.get("/contactus", (req, res, next) => {
+  console.log("hello world");
+  res.render("./handlebars/contactus");
+});
+
 module.exports = router;
